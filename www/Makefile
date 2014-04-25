@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1025 2014/04/12 12:48:49 rodent Exp $
+# $NetBSD: Makefile,v 1.1027 2014/04/24 19:53:10 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -597,6 +597,7 @@ SUBDIR+=	py-django-sekizai
 SUBDIR+=	py-django-south
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-django14
+SUBDIR+=	py-djangocms-admin-style
 SUBDIR+=	py-djangorestframework
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin
@@ -637,6 +638,7 @@ SUBDIR+=	py-simpletal
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-tornado
 SUBDIR+=	py-uliweb
+SUBDIR+=	py-urllib3
 SUBDIR+=	py-uwsgi
 SUBDIR+=	py-uwsgitop
 SUBDIR+=	py-webassets

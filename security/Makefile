@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2014/04/07 12:37:49 obache Exp $
+# $NetBSD: Makefile,v 1.506 2014/04/23 11:28:33 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -12,6 +12,7 @@ SUBDIR+=	KeePass
 SUBDIR+=	MyPasswordSafe
 SUBDIR+=	PACK
 SUBDIR+=	PAM
+SUBDIR+=	PortableSigner
 SUBDIR+=	aide
 SUBDIR+=	aide06
 SUBDIR+=	amap
@@ -263,6 +264,7 @@ SUBDIR+=	p5-Digest-Nilsimsa
 SUBDIR+=	p5-Digest-Perl-MD5
 SUBDIR+=	p5-Digest-SHA
 SUBDIR+=	p5-Digest-SHA1
+SUBDIR+=	p5-Digest-SHA3
 SUBDIR+=	p5-File-KeePass
 SUBDIR+=	p5-GSSAPI
 SUBDIR+=	p5-GnuPG-Interface
@@ -408,6 +410,7 @@ SUBDIR+=	sniff
 SUBDIR+=	snortsnarf
 SUBDIR+=	snow
 SUBDIR+=	softhsm
+SUBDIR+=	spiped
 SUBDIR+=	srm
 SUBDIR+=	srp_client
 SUBDIR+=	ssdeep

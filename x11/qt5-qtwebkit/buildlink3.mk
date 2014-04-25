@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2014/04/09 07:26:58 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2014/04/23 07:05:32 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtwebkit
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtwebkit
 QT5_QTWEBKIT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtwebkit+=	qt5-qtwebkit>=5.2.0
-BUILDLINK_ABI_DEPENDS.qt5-qtwebkit?=	qt5-qtwebkit>=5.2.0nb6
+BUILDLINK_ABI_DEPENDS.qt5-qtwebkit?=	qt5-qtwebkit>=5.2.0nb8
 BUILDLINK_PKGSRCDIR.qt5-qtwebkit?=	../../x11/qt5-qtwebkit
 
 BUILDLINK_INCDIRS.qt5-qtwebkit+=	qt5/include
@@ -21,9 +21,9 @@ BUILDLINK_LIBDIRS.qt5-qtwebkit+=	qt5/plugins
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../x11/libXcomposite/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.endif
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
 .include "../../x11/qt5-qtlocation/buildlink3.mk"
 .include "../../x11/qt5-qtmultimedia/buildlink3.mk"

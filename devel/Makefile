@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1881 2014/04/04 06:10:48 wen Exp $
+# $NetBSD: Makefile,v 1.1888 2014/04/24 16:16:41 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -265,6 +265,7 @@ SUBDIR+=	gobject-introspection
 SUBDIR+=	google-glog
 SUBDIR+=	googletest
 SUBDIR+=	gperf
+SUBDIR+=	gperftools
 SUBDIR+=	gprbuild-aux
 SUBDIR+=	gps
 SUBDIR+=	gputils
@@ -1454,8 +1455,10 @@ SUBDIR+=	py-daemon
 SUBDIR+=	py-darcsver
 SUBDIR+=	py-decorator
 SUBDIR+=	py-distribute
+SUBDIR+=	py-docopt
 SUBDIR+=	py-doctor
 SUBDIR+=	py-dulwich
+SUBDIR+=	py-enum34
 SUBDIR+=	py-expect
 SUBDIR+=	py-filechunkio
 SUBDIR+=	py-flakes
@@ -1473,6 +1476,7 @@ SUBDIR+=	py-hgview
 SUBDIR+=	py-idle
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
+SUBDIR+=	py-ipython010
 SUBDIR+=	py-ipython013
 SUBDIR+=	py-ipython1
 SUBDIR+=	py-jersey
@@ -1487,6 +1491,7 @@ SUBDIR+=	py-logilab-common
 SUBDIR+=	py-macholib
 SUBDIR+=	py-mako
 SUBDIR+=	py-memcached
+SUBDIR+=	py-mercurial
 SUBDIR+=	py-minimock
 SUBDIR+=	py-mock
 SUBDIR+=	py-modulegraph
@@ -1547,6 +1552,7 @@ SUBDIR+=	qof
 SUBDIR+=	qtscriptgenerator
 SUBDIR+=	quilt
 SUBDIR+=	ragel
+SUBDIR+=	rainbow-delimiters-el
 SUBDIR+=	rapidsvn
 SUBDIR+=	ratfor
 SUBDIR+=	rcs
@@ -1709,6 +1715,7 @@ SUBDIR+=	silc-toolkit
 SUBDIR+=	slib
 SUBDIR+=	sml-mode
 SUBDIR+=	snappy
+SUBDIR+=	snappy-java10
 SUBDIR+=	sofia-sip
 SUBDIR+=	sparse
 SUBDIR+=	sparsehash

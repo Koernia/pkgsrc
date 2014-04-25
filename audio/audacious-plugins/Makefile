@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2014/02/12 23:17:32 tron Exp $
-#
+# $NetBSD: Makefile,v 1.55 2014/04/20 02:27:50 ryoon Exp $
 
 DISTNAME=		audacious-plugins-1.5.1
-PKGREVISION=		41
+PKGREVISION=		44
 CATEGORIES=		audio
 MASTER_SITES=		http://distfiles.atheme.org/
 EXTRACT_SUFX=		.tgz
@@ -39,9 +38,12 @@ LDFLAGS+=		${LIBOSSAUDIO}
 # do not use pkgsrc' flac if it is installed
 CFLAGS+=	-I. -I../flacng -Ilibflacng
 
-CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
-			--disable-coreaudio --disable-projectm \
-			--disable-gnomeshortcuts
+CONFIGURE_ARGS+=	--disable-amidiplug
+CONFIGURE_ARGS+=	--disable-evdevplug
+CONFIGURE_ARGS+=	--disable-coreaudio
+CONFIGURE_ARGS+=	--disable-projectm
+CONFIGURE_ARGS+=	--disable-gnomeshortcuts
+CONFIGURE_ARGS+=	--disable-modplug
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -77,8 +79,8 @@ PLIST.oss=	yes
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libmpcdec/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"

@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2014/04/09 07:26:57 obache Exp $
+# $NetBSD: Makefile,v 1.9 2014/04/23 07:05:32 adam Exp $
 
 PKGNAME=	qt5-qtquick1-${QTVERSION}
-PKGREVISION=	5
 COMMENT=	Qt5 module for Quick1
 
 .include "../../x11/qt5-qtbase/Makefile.common"
 
 USE_LIBTOOL=		yes
-
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
 
-BUILD_DIRS+=		qtquick1
+BUILD_DIRS=		qtquick1
 MAKE_ENV+=		QTDIR=${QTDIR}
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
@@ -23,8 +21,6 @@ post-install:
 		ln -s ${QTPREFIX}/lib/pkgconfig/${i} ${i}
 .endfor
 
-.include "../../x11/qt5-qtbase/buildlink3.mk"
-.include "../../x11/qt5-qtquick1/buildlink3.mk"
 .include "../../x11/qt5-qtscript/buildlink3.mk"
 .include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
