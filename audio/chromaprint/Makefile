@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/04/10 05:39:14 obache Exp $
+# $NetBSD: Makefile,v 1.5 2014/04/27 16:29:39 wiz Exp $
 
-DISTNAME=	chromaprint-0.7
-PKGREVISION=	1
+DISTNAME=	chromaprint-1.1
 CATEGORIES=	audio
 MASTER_SITES=	https://bitbucket.org/acoustid/chromaprint/downloads/
 
@@ -14,6 +13,8 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 # build and install "fpcalc"
 CMAKE_ARGS+=	-DBUILD_EXAMPLES:BOOL=on
+
+PKGCONFIG_OVERRIDE=	libchromaprint.pc.cmake
 
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

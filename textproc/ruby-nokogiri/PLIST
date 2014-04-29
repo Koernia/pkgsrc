@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.10 2014/03/25 16:14:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2014/04/28 01:18:03 taca Exp $
 bin/nokogiri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/nokogiri/nokogiri.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.gemtest
+${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGELOG.ja.rdoc
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/C_CODING_STYLE.rdoc
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.ja.rdoc
 ${GEM_LIBDIR}/README.rdoc
@@ -16,6 +18,7 @@ ${GEM_LIBDIR}/STANDARD_RESPONSES.md
 ${GEM_LIBDIR}/Y_U_NO_GEMSPEC.md
 ${GEM_LIBDIR}/bin/nokogiri
 ${GEM_LIBDIR}/build_all
+${GEM_LIBDIR}/dependencies.yml
 ${GEM_LIBDIR}/ext/nokogiri/depend
 ${GEM_LIBDIR}/ext/nokogiri/extconf.rb
 ${GEM_LIBDIR}/ext/nokogiri/html_document.c
@@ -160,6 +163,7 @@ ${GEM_LIBDIR}/test/files/2ch.html
 ${GEM_LIBDIR}/test/files/address_book.rlx
 ${GEM_LIBDIR}/test/files/address_book.xml
 ${GEM_LIBDIR}/test/files/bar/bar.xsd
+${GEM_LIBDIR}/test/files/bogus.xml
 ${GEM_LIBDIR}/test/files/dont_hurt_em_why.xml
 ${GEM_LIBDIR}/test/files/encoding.html
 ${GEM_LIBDIR}/test/files/encoding.xhtml
@@ -170,6 +174,10 @@ ${GEM_LIBDIR}/test/files/metacharset.html
 ${GEM_LIBDIR}/test/files/noencoding.html
 ${GEM_LIBDIR}/test/files/po.xml
 ${GEM_LIBDIR}/test/files/po.xsd
+${GEM_LIBDIR}/test/files/saml/saml20assertion_schema.xsd
+${GEM_LIBDIR}/test/files/saml/saml20protocol_schema.xsd
+${GEM_LIBDIR}/test/files/saml/xenc_schema.xsd
+${GEM_LIBDIR}/test/files/saml/xmldsig_schema.xsd
 ${GEM_LIBDIR}/test/files/shift_jis.html
 ${GEM_LIBDIR}/test/files/shift_jis.xml
 ${GEM_LIBDIR}/test/files/snuggles.xml
